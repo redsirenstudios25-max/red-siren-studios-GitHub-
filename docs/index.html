@@ -30,7 +30,10 @@
       text-decoration: none;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       position: sticky;
       top: 0;
@@ -43,7 +46,7 @@
     .nav {
       max-width: 1200px;
       margin: auto;
-      padding: 18px 22px;
+      padding: 14px 22px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -58,16 +61,14 @@
       letter-spacing: 1px;
     }
 
-    .brand-mark {
+    /* RED SIREN LOGO */
+    .brand-logo {
       width: 42px;
       height: 42px;
-      border: 2px solid #e50914;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #e50914;
-      font-size: 20px;
-      font-weight: 900;
+      min-width: 42px;
+      min-height: 42px;
+      object-fit: contain;
+      display: block;
     }
 
     .brand span {
@@ -85,21 +86,31 @@
       color: #fff;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero {
       min-height: 82vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 22px;
+      padding: 70px 22px 90px;
+
       background:
-        radial-gradient(circle at center, rgba(229, 9, 20, 0.16), transparent 38%),
+        radial-gradient(
+          circle at center,
+          rgba(229, 9, 20, 0.16),
+          transparent 38%
+        ),
         #050505;
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
+      width: 100%;
+      margin: auto;
     }
 
     .eyebrow {
@@ -111,7 +122,22 @@
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 2px;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
+    }
+
+    /* =========================
+       COVER IMAGE
+    ========================= */
+
+    .hero-cover {
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 30px;
+      border-radius: 10px;
     }
 
     .hero h1 {
@@ -166,7 +192,10 @@
       background: #1b1b1b;
     }
 
-    /* SECTIONS */
+    /* =========================
+       SECTIONS
+    ========================= */
+
     section {
       max-width: 1200px;
       margin: auto;
@@ -196,7 +225,10 @@
       max-width: 650px;
     }
 
-    /* STUDIO */
+    /* =========================
+       STUDIO
+    ========================= */
+
     .studio-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -232,7 +264,10 @@
       font-size: 14px;
     }
 
-    /* APPS */
+    /* =========================
+       APPS
+    ========================= */
+
     .apps-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -292,7 +327,10 @@
       border: 1px solid rgba(255, 184, 77, 0.3);
     }
 
-    /* VISION */
+    /* =========================
+       VISION
+    ========================= */
+
     .vision {
       border-top: 1px solid #1d1d1d;
       border-bottom: 1px solid #1d1d1d;
@@ -321,7 +359,10 @@
       font-size: 17px;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer {
       border-top: 1px solid #222;
       padding: 35px 22px;
@@ -334,10 +375,25 @@
       color: #fff;
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
+
     @media (max-width: 700px) {
+
       .nav {
-        padding: 14px 16px;
+        padding: 12px 16px;
+      }
+
+      .brand-logo {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+      }
+
+      .brand span {
+        font-size: 14px;
       }
 
       .nav-links {
@@ -346,7 +402,13 @@
 
       .hero {
         min-height: 75vh;
-        padding: 65px 18px;
+        padding: 55px 18px 70px;
+      }
+
+      .hero-cover {
+        max-width: 100%;
+        max-height: 150px;
+        margin-bottom: 25px;
       }
 
       .hero h1 {
@@ -383,13 +445,24 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="nav">
 
       <a href="#" class="brand">
-        <img src="logo_site.png" class="brand-logo" alt="Red Siren Studios">
+
+        <img
+          src="logo_site.png"
+          class="brand-logo"
+          alt="Red Siren Studios Logo"
+        >
+
         <span>RED SIREN STUDIOS</span>
+
       </a>
 
       <nav class="nav-links">
@@ -399,84 +472,158 @@
       </nav>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
+
   <main>
 
     <div class="hero">
+
       <div class="hero-content">
 
-        <div class="eyebrow">RED SIREN STUDIOS</div>
+        <div class="eyebrow">
+          RED SIREN STUDIOS
+        </div>
+
+
+        <!-- CINEMATIC COVER -->
+
+        <img
+          src="site_cover.png"
+          class="hero-cover"
+          alt="Red Siren Studios Cinematic Cover"
+        >
+
 
         <h1>
           CREATE.<br>
           <span>IMPACT.</span>
         </h1>
 
+
         <p>
           A creative studio building cinematic stories, powerful experiences
           and innovative digital tools.
         </p>
 
+
         <div class="hero-buttons">
-          <a href="#studio" class="btn btn-primary">Explore Studio</a>
-          <a href="#apps" class="btn btn-dark">Explore Apps</a>
+
+          <a href="#studio" class="btn btn-primary">
+            Explore Studio
+          </a>
+
+          <a href="#apps" class="btn btn-dark">
+            Explore Apps
+          </a>
+
         </div>
 
       </div>
+
     </div>
 
 
-    <!-- STUDIO -->
+    <!-- =========================
+         STUDIO
+    ========================= -->
+
     <section id="studio">
 
       <div class="section-title">
-        <div class="section-label">01 — STUDIO</div>
-        <h2>Cinematic Creation</h2>
+
+        <div class="section-label">
+          01 — STUDIO
+        </div>
+
+        <h2>
+          Cinematic Creation
+        </h2>
+
         <p>
           Red Siren Studios is building a creative production identity around
           movies, activations, storytelling and effects-driven entertainment.
         </p>
+
       </div>
+
 
       <div class="studio-grid">
 
         <div class="studio-card">
-          <div class="card-icon">🎬</div>
-          <h3>Movies</h3>
+
+          <div class="card-icon">
+            🎬
+          </div>
+
+          <h3>
+            Movies
+          </h3>
+
           <p>
             Developing cinematic projects across action, drama, crime,
             horror and other original stories.
           </p>
+
         </div>
 
+
         <div class="studio-card">
-          <div class="card-icon">⚡</div>
-          <h3>Activations</h3>
+
+          <div class="card-icon">
+            ⚡
+          </div>
+
+          <h3>
+            Activations
+          </h3>
+
           <p>
             Creative experiences designed to connect audiences with
             entertainment and brands.
           </p>
+
         </div>
 
+
         <div class="studio-card">
-          <div class="card-icon">📖</div>
-          <h3>Storytelling</h3>
+
+          <div class="card-icon">
+            📖
+          </div>
+
+          <h3>
+            Storytelling
+          </h3>
+
           <p>
             Original characters, concepts and stories built for screen,
             digital platforms and future productions.
           </p>
+
         </div>
 
+
         <div class="studio-card">
-          <div class="card-icon">🧟</div>
-          <h3>Zombie & Horror</h3>
+
+          <div class="card-icon">
+            🧟
+          </div>
+
+          <h3>
+            Zombie & Horror
+          </h3>
+
           <p>
             Exploring atmospheric horror, practical effects, visual effects
             and immersive cinematic worlds.
           </p>
+
         </div>
 
       </div>
@@ -484,30 +631,52 @@
     </section>
 
 
-    <!-- APPS -->
+    <!-- =========================
+         OUR APPS
+    ========================= -->
+
     <section id="apps">
 
       <div class="section-title">
-        <div class="section-label">02 — OUR APPS</div>
-        <h2>Built by Red Siren</h2>
+
+        <div class="section-label">
+          02 — OUR APPS
+        </div>
+
+        <h2>
+          Built by Red Siren
+        </h2>
+
         <p>
           Digital tools created to support music, creativity, production
           and the growing Red Siren ecosystem.
         </p>
+
       </div>
+
 
       <div class="apps-grid">
 
         <div class="app-card">
 
-          <div class="app-icon">🎵</div>
+          <div class="app-icon">
+            🎵
+          </div>
 
           <div class="app-info">
-            <h3>RS Tune Pro</h3>
+
+            <h3>
+              RS Tune Pro
+            </h3>
+
             <p>
               Music recording and creative audio production platform.
             </p>
-            <span class="status live">AVAILABLE</span>
+
+            <span class="status live">
+              AVAILABLE
+            </span>
+
           </div>
 
         </div>
@@ -515,14 +684,24 @@
 
         <div class="app-card">
 
-          <div class="app-icon">🎬</div>
+          <div class="app-icon">
+            🎬
+          </div>
 
           <div class="app-info">
-            <h3>Red Siren Studio</h3>
+
+            <h3>
+              Red Siren Studio
+            </h3>
+
             <p>
               A creative studio application for cinematic production.
             </p>
-            <span class="status dev">IN DEVELOPMENT</span>
+
+            <span class="status dev">
+              IN DEVELOPMENT
+            </span>
+
           </div>
 
         </div>
@@ -530,14 +709,24 @@
 
         <div class="app-card">
 
-          <div class="app-icon">🎙️</div>
+          <div class="app-icon">
+            🎙️
+          </div>
 
           <div class="app-info">
-            <h3>Red Siren Voice</h3>
+
+            <h3>
+              Red Siren Voice
+            </h3>
+
             <p>
               Voice recording and creative audio application.
             </p>
-            <span class="status dev">IN DEVELOPMENT</span>
+
+            <span class="status dev">
+              IN DEVELOPMENT
+            </span>
+
           </div>
 
         </div>
@@ -545,14 +734,24 @@
 
         <div class="app-card">
 
-          <div class="app-icon">📷</div>
+          <div class="app-icon">
+            📷
+          </div>
 
           <div class="app-info">
-            <h3>Red Siren Camera</h3>
+
+            <h3>
+              Red Siren Camera
+            </h3>
+
             <p>
               Camera and visual production tools for creators.
             </p>
-            <span class="status dev">IN DEVELOPMENT</span>
+
+            <span class="status dev">
+              IN DEVELOPMENT
+            </span>
+
           </div>
 
         </div>
@@ -562,14 +761,19 @@
     </section>
 
 
-    <!-- VISION -->
+    <!-- =========================
+         VISION
+    ========================= -->
+
     <div class="vision" id="vision">
 
       <div class="vision-inner">
 
         <div class="vision-box">
 
-          <div class="section-label">OUR VISION</div>
+          <div class="section-label">
+            OUR VISION
+          </div>
 
           <h2>
             From ideas<br>
@@ -592,13 +796,22 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
-    <strong>RED SIREN STUDIOS</strong>
+
+    <strong>
+      RED SIREN STUDIOS
+    </strong>
+
     <br>
+
     © 2026 Red Siren Studios. All rights reserved.
+
   </footer>
 
 
 </body>
-        </html>
+</html>
